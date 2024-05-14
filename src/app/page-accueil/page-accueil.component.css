@@ -1,0 +1,62 @@
+h1 {
+  /*text-align: center;*/
+  font-family: "Times New Roman", serif;
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 100vh; /* 100% de la hauteur de la vue (viewport) */
+}
+
+.main-container {
+  /*background: linear-gradient(90deg, #dbecff, #C4DFFF, #dbecff);*/
+  min-height: 100vh; /* Assurez-vous que le conteneur s'étire sur toute la hauteur de la vue (viewport) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.accueil {
+  width: 50%;
+  padding: 20px 10px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 28px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.connexion {
+  display: flex;
+  font-size: 22px;
+  font-family: "Arial", serif;
+  width: 80%;
+  margin: 60px auto auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+button {
+  width: 300px;
+  height: 50px;
+  border: none;
+  border-radius: 30px;
+  background-color: #009dd2;
+  color: #EEEEEE;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+}

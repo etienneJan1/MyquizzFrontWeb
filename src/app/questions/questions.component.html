@@ -1,0 +1,29 @@
+<div class="page">
+  <div class="header">
+    <h4>Nombre de points : <span id="nb_points">{{this.score}}</span></h4>
+  </div>
+  <div class="title_question" *ngIf="question$ | async as question">
+    <div class="title">
+      <h1 class="question">{{question.at(0)?.contenu}}</h1>
+    </div>
+  </div>
+
+  <div class="body_questions" *ngIf="reponse$ | async as reponse">
+    <div class="prem_col">
+      <div class="inner-rectangle" [style.background-color]="isCorrectColor(0)" (click)="handleClick(0)">
+        <span>{{reponse.at(0)?.contenu}}</span>
+      </div>
+      <div class="inner-rectangle" [style.background-color]="isCorrectColor(1)" (click)="handleClick(1)">
+        <span>{{reponse.at(1)?.contenu}}</span>
+      </div>
+    </div>
+    <div class="prem_col">
+      <div class="inner-rectangle" [style.background-color]="isCorrectColor(2)" (click)="handleClick(2)">
+        <span>{{reponse.at(2)?.contenu}}</span>
+      </div>
+      <div class="inner-rectangle" [style.background-color]="isCorrectColor(3)" (click)="handleClick(3)">
+        <span>{{reponse.at(3)?.contenu}}</span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<app-navbar-user></app-navbar-user>
+<div>
+  <div class="texte">
+    <span>{{user?.pseudo}}, choisissez le thème du quiz</span>
+  </div>
+  <div class="themes" *ngIf="theme$ | async as themes">
+    <button *ngFor="let theme of themes" routerLink="/lien/{{theme.genre}}">
+      {{ theme.genre }}
+    </button>
+  </div>
+  <!--  <div class="themes" *ngIf="theme$ | async as themes">-->
+  <!--    <button *ngFor="let theme of themes" class='{{theme.genre}}' routerLink="/lien/{{theme.genre}}">-->
+  <!--      {{ theme.genre }}-->
+  <!--    </button>-->
+  <!--  </div>-->
+</div>

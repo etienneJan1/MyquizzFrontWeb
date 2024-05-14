@@ -1,0 +1,30 @@
+<app-navbar-admin></app-navbar-admin>
+<div class="contenu">
+  <form class="row g-3 needs-validation" novalidate [formGroup]="questionForm">
+    <div class="d-flex align-items-center justify-content-center">
+        <span class="form-control-static"
+              style="font-size: 26px; font-weight: bold; padding-bottom: 30px">Quiz {{ questionForm.get('genre')?.value }}</span>
+
+    </div>
+    <div class="mb-3 row">
+      <label for="question_contenu" class="col-sm-2 col-form-label">Intitulé</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="question_contenu" formControlName="contenu" required>
+        <div class="mb-3 text-danger"
+             *ngIf="questionForm.get('contenu')?.invalid && (questionForm.get('contenu')?.dirty || questionForm.get('contenu')?.touched) || (submitted && questionForm.invalid)">
+          Veuillez fournir un intitulé à la question.
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex align-items-center justify-content-center">
+      <button type="submit" class="btn btn-primary" (click)="submitForm()"
+              style="background: linear-gradient(90deg, #0d6efd, #0d3dfd);">Créer
+      </button>
+    </div>
+  </form>
+
+</div>
+
+
+

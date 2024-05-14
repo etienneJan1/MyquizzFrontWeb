@@ -1,0 +1,30 @@
+<app-navbar-admin></app-navbar-admin>
+<ng-container *ngIf="reponse$ | async; let reponse">
+  <div class="contenu">
+    <form (ngSubmit)="save(reponse)" #reponseForm="ngForm">
+      <div class="mb-3 row">
+        <label for="reponse_contenu" class="col-sm-1 col-form-label">Contenu</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="reponse_contenu" required
+                 [(ngModel)]="reponse.contenu" name="contenu"
+                 #reponse="ngModel">
+        </div>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" [(ngModel)]="reponse.isgood" name="isgood">
+        <label class="form-check-label">
+          Bonne réponse ?
+        </label>
+      </div>
+
+      <div class="d-flex align-items-center justify-content-center">
+        <button type="button" class="btn btn-danger bouton_rouge" (click)="deleteReponse()">
+          Supprimer
+          la réponse
+        </button>
+        <button type="submit" class="btn btn-primary bouton_bleu">Valider les modifications</button>
+      </div>
+    </form>
+  </div>
+</ng-container>

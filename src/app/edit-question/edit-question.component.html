@@ -1,0 +1,21 @@
+<app-navbar-admin></app-navbar-admin>
+<ng-container *ngIf="question$ | async; let question">
+  <div class="contenu">
+    <form (ngSubmit)="save(question)" #quizForm="ngForm">
+      <div class="mb-3 row">
+        <label for="question_contenu" class="col-sm-2 col-form-label">Question </label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="question_contenu" required
+                 [(ngModel)]="question.contenu" name="contenu"
+                 #pseudo="ngModel">
+        </div>
+      </div>
+      <div class="d-flex align-items-center justify-content-center">
+        <button type="button" class="btn btn-danger bouton_rouge" (click)="deleteQuestion()"
+                routerLink="/detail_quiz/{{question.genre}}/{{question.id}}">Supprimer la question
+        </button>
+        <button type="submit" class="btn btn-primary bouton_bleu">Valider les modifications</button>
+      </div>
+    </form>
+  </div>
+</ng-container>

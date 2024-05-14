@@ -1,0 +1,30 @@
+body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.contenu {
+  width: 50%;
+  margin: 2% auto;
+}
+
+h2 {
+  margin-bottom: 30px;
+}
+
+.container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.question-div {
+  margin-bottom: 40px;
+}
+
+.espacement {
+  margin-bottom: 10px;
+}
+

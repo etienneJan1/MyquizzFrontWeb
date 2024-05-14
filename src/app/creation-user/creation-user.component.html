@@ -1,0 +1,47 @@
+<app-navbar-admin></app-navbar-admin>
+<div class="contenu">
+  <form class="row g-3 needs-validation" novalidate [formGroup]="userForm" (ngSubmit)="create()">
+    <div class="mb-3 row">
+      <label for="user_pseudo" class="col-sm-1 col-form-label">Pseudo</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="user_pseudo" formControlName="pseudo" required>
+        <div class="mb-3 text-danger"
+             *ngIf="userForm.get('pseudo')?.invalid && (userForm.get('pseudo')?.dirty || userForm.get('pseudo')?.touched) || (submitted && userForm.invalid)">
+          Veuillez fournir un pseudo.
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-3 row" style="margin-bottom: 20px;">
+      <label for="user_email" class="col-sm-1 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="user_email" formControlName="email" required>
+        <div class="mb-3 text-danger"
+             *ngIf="userForm.get('email')?.invalid && (userForm.get('email')?.dirty || userForm.get('email')?.touched) || (submitted && userForm.invalid)">
+          Veuillez fournir un email valide.
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-3 row" style="margin-bottom: 20px;">
+      <label for="user_score" class="col-sm-1 col-form-label">Score</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="user_score" formControlName="score" value="0"
+               style="color: #808080;" onfocus="if(this.value==this.defaultValue)this.value='';"
+               onblur="if(this.value=='')this.value=this.defaultValue;">
+      </div>
+    </div>
+
+    <div class="d-flex align-items-center justify-content-center">
+      <button type="submit" class="btn btn-primary"
+              style="width: 100px; background: linear-gradient(90deg, #0d6efd, #0d19fd);" (click)="submitForm()" [routerLink]="'/gestion_user'">Créer
+      </button>
+    </div>
+  </form>
+
+
+
+</div>
+
+
+

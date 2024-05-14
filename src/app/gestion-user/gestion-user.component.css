@@ -1,0 +1,13 @@
+body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.choix_quiz {
+  width: 80%;
+  margin: 10% auto;
+}
+

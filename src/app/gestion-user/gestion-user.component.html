@@ -1,0 +1,33 @@
+<app-navbar-admin></app-navbar-admin>
+<div class="choix_quiz">
+
+  <table class="table table-striped table-hover">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Pseudo</th>
+      <th scope="col">Email</th>
+      <th scope="col">Score</th>
+      <th scope="col">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of user$ | async">
+      <td>{{ user.id }}</td>
+      <td>{{ user.pseudo }}</td>
+      <td>{{ user.email}}</td>
+      <td>{{ user.score }}</td>
+      <td>
+        <a class="btn btn-success" style="width: 32px; height: 30px; padding: 0; margin-right: 5px">
+          <img src="/assets/pencil.svg" alt="Editer" routerLink="/edit_user/{{user.id}}">
+        </a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <div class="d-flex align-items-center justify-content-center">
+    <button type="button" class="btn btn-primary" routerLink="/creation_user"
+            style="background: linear-gradient(90deg, #0d6efd, #0d19fd);">Créer un nouvel utilisateur
+    </button>
+  </div>
+</div>

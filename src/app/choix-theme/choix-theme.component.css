@@ -1,0 +1,36 @@
+body {
+  /*display: flex;*/
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.texte {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Arial", serif;
+  margin-top: 2%;
+  padding-bottom: 60px;
+}
+
+.themes {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+
+button {
+  background: linear-gradient(90deg, #1fa2ff, #1f88ff, #1f5eff, #4866ff);
+  color: #FFFFFF;
+  padding: 5px;
+  width: 100%;
+  height: fit-content;
+  font-size: 22px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 0 20px 20px;
+  border: none;
+}
+

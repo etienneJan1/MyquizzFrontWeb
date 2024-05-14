@@ -1,0 +1,55 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.texte {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Arial", serif;
+  margin-top: 100px;
+  padding-bottom: 60px;
+}
+
+.themes {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+
+button {
+  color: #FFFFFF;
+  padding: 10px 20px;
+  width: 300px;
+  height: 200px;
+  font-size: 22px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+}
+
+.Sport {
+  background-color: #ff2d00;
+  border: 2px solid #bd0000;
+}
+
+.Musique {
+  background-color: #1ac400;
+  border: 2px solid #0e8800;
+}
+
+.Cinéma {
+  background-color: #0026e1;
+  border: 2px solid #001aa9;
+}
+
+.Culture {
+  background-color: #ff8800;
+  border: 2px solid #bd6500;
+}

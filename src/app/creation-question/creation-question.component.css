@@ -1,0 +1,12 @@
+body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.contenu {
+  width: 50%;
+  margin: 10% auto;
+}

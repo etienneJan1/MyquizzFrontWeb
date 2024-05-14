@@ -1,0 +1,13 @@
+<app-navbar-user></app-navbar-user>
+<div class="page">
+  <div class="texte">
+    <span>Etes-vous prêts ?</span>
+  </div>
+
+  <div class="start" *ngIf="questions$ | async as questions">
+
+    <button class="bouton_start" (click)="getId()">Démarrer le quiz</button>
+
+  </div>
+
+</div>

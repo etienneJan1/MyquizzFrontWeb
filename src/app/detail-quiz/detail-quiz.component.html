@@ -1,0 +1,37 @@
+<app-navbar-admin></app-navbar-admin>
+<div class="choix_quiz d-flex flex-column">
+
+  <table class="table table-striped table-hover">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Genre du quiz</th>
+      <th scope="col">Intitulé de la question</th>
+      <th scope="col">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let quizz of quizz$ | async">
+      <td>{{ quizz.id }}</td>
+      <td>{{ quizz.genre }}</td>
+      <td>{{ quizz.contenu}}</td>
+      <td>
+        <button class="btn btn-success" routerLink="/detail_question/{{quizz.id}}"
+                style="background: linear-gradient(90deg, #198733, #0e862a); margin-right: 5px">Détails
+        </button>
+        <button class="btn" routerLink="/edit_question/{{quizz.id}}"
+                style="background: linear-gradient(90deg, #3f9fff, #3f7cff); color: white">Editer
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <div class="d-flex align-items-center justify-content-center">
+    <button type="button" class="btn btn-primary" routerLink="/creation_question/{{quizGenre}}/{{quizId}}"
+            style="background: linear-gradient(90deg, #0d6efd, #0d19fd);">Créer une question
+    </button>
+  </div>
+
+</div>
+

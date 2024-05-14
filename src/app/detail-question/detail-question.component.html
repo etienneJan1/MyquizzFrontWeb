@@ -1,0 +1,35 @@
+<app-navbar-admin></app-navbar-admin>
+<div class="contenu d-flex flex-column">
+
+  <table class="table table-striped table-hover">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Intitulé de la réponse</th>
+      <th scope="col">True/False</th>
+      <th scope="col">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let reponse of reponse$ | async">
+      <td>{{ reponse.id }}</td>
+      <td>{{ reponse.contenu }}</td>
+      <td>{{ reponse.isgood}}</td>
+      <td>
+        <a class="btn btn-success" style="width: 32px; height: 30px; padding: 0; margin-right: 5px">
+          <img src="/assets/pencil.svg" alt="Editer" (click)="redirectToEditQuestion()" routerLink="/edit_reponse/{{reponse.id}}">
+        </a>
+
+
+      </td>
+    </tr>
+
+    </tbody>
+  </table>
+
+  <div class="d-flex align-items-center justify-content-center">
+    <button type="button" class="btn btn-primary" routerLink="/creation_reponse/{{questionId}}">Créer une réponse</button>
+  </div>
+
+
+</div>
